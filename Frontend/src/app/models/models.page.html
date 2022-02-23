@@ -1,0 +1,129 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 100px; height: 100px;"></a>
+        <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/dash">Dashboard</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <ion-button color="warning" routerLink="/booking">Bookings</ion-button>
+            <ion-button color="warning" routerLink="/login">Login</ion-button>
+            <ion-button color="warning" routerLink="/registration">Sign Up</ion-button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>TOYOTA</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4" >
+
+    <div class="col" *ngFor="let row of carData">
+      <div class="card"style="background-color:transparent" routerLink={{row.car_id}}>
+        <img src="{{row.vechile_img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{row.vechile_name}}</h5>
+          <h5 class="card-title"> <br> <h2>R{{row.  rent_price}}</h2>per day</h5>
+          <button class="btn btn-success"  (click)="addtoCart('vehicle_name') " routerLink="checkout">continue booking</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMux8W56WJCV4TuhRafj-dx8jss5De3Q8cCTlrIKh7B-wCIjIfLYtRRC9BXQS1A2oAL1E&usqp=CAU" class="card-img-top" alt="..." routerLink="/hilux">
+        <div class="card-body">
+          <h5 class="card-title">new Hilux Double Cab</h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://image.blob.ix.co.za/LayoutImage/21/8/Promo_Image_Automark-8-958x539.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Toyota RAV4</h5>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <hr>
+  <h1>MERCEDES BENZ</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4" >
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://www.mercedes-benz.co.uk/passengercars/mercedes-benz-cars/models/eqa/design/equipment/_jcr_content/swipeableteaserbox/par/swipeableteaser_1241909799/asset.MQ6.12.2x.20211013114243.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-EQ</h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"style="background-color:transparent" >
+        <img src="https://www.mercedes-benz.co.uk/passengercars/mercedes-benz-cars/models/eqv/explore/more-information/_jcr_content/par/teaserbox/teaserelement2/teaserelement/image.MQ6.6.2x.20210528181432.jpeg" class="card-img-top" alt="..." routerLink="/cars">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-EQ V-class
+          </h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://www.mercedes-benz.co.uk/passengercars/mercedes-benz-cars/models/eqa/design/equipment/_jcr_content/swipeableteaserbox/par/swipeableteaser_1241909799/asset.MQ6.12.2x.20211013114243.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-EQ A-class</h5>
+
+      </div>
+    </div>
+    </div>
+  </div>
+  <hr>
+  <h1>KIA</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4" >
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://www.kia.co.za/assets/images/vehicles/vehicle_19/colours/19_build_88_1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">KIA picanto</h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://www.kia.co.za/assets/images/vehicles/vehicle_42/colours/42_build_286_1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kia pegas
+          </h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card"style="background-color:transparent">
+        <img src="https://www.kia.co.za/assets/images/vehicles/vehicle_42/colours/42_build_286_1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-EQ A-class</h5>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+</ion-content>

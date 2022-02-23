@@ -1,0 +1,143 @@
+
+<body>
+  <nav class="d-flex align-items-center navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 100px; height: 100px;"></a>
+      <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link active mx-4 text-blue h4" aria-current="page" routerLink="/home">Home</a>
+          </li>
+
+        </ul>
+        <div class="d-flex">
+        <button type="button" (click)="clickAddCar()" id="trigger-button" class="btn btn-warning ms-auto">Add</button>
+
+      </div>
+       </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- modal -->
+  <ion-modal trigger="trigger-button">
+    <ng-template>
+    <ion-content>
+      <div class="modal-header">
+        <h5 class="modal-title">Car Details</h5>
+
+        <ion-fab-button id="trigger-button" (click)="exit()" slot="fixed">
+          <ion-icon name="close"></ion-icon>
+        </ion-fab-button>
+
+      </div>
+
+      <form [formGroup]="formValue">
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" formControlName="v_name" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Brand</label>
+          <input type="text" formControlName="v_brand" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="m-3">
+          <label for="exampleInputPassword1" class="form-label">Price per day</label>
+          <input type="email" formControlName="rent_price" class="form-control rounded-pill" id="exampleInputPassword1">
+        </div>
+        <div class="m-3">
+          <label for="exampleInputPassword1" class="form-label">Year Model</label>
+          <input type="text" formControlName="yr_model" class="form-control rounded-pill" id="exampleInputPassword1">
+        </div>
+        <div class="m-3">
+          <label for="exampleInputPassword1" class="form-label">Image</label>
+          <input type="text" formControlName="v_img" class="form-control rounded-pill" id="exampleInputPassword1">
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Pick Up Area</label>
+          <ion-select placeholder="Select One" formControlName="pick_up_area">
+            <ion-select-option value="L">Pretoria</ion-select-option>
+            <ion-select-option value="MP">Midrand</ion-select-option>
+            <ion-select-option value="GP">Centurion</ion-select-option>
+            <ion-select-option value="KZN">Sandton</ion-select-option>
+            <ion-select-option value="FS">Randburg-Jhb</ion-select-option>
+          </ion-select>
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Pick Up Date</label>
+          <input type="date" formControlName="pick_up_date" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Pick Up Time</label>
+          <input type="time" formControlName="pick_up_time" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Drop Off Area</label>
+          <ion-select placeholder="Select One" formControlName="drop_off_area">
+            <ion-select-option value="L">Pretoria</ion-select-option>
+            <ion-select-option value="MP">Midrand</ion-select-option>
+            <ion-select-option value="GP">Centurion</ion-select-option>
+            <ion-select-option value="KZN">Sandton</ion-select-option>
+            <ion-select-option value="FS">Randburg-Jhb</ion-select-option>
+          </ion-select>
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Drop Off Date</label>
+          <input type="date" formControlName="drop_off_date" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class=" m-3">
+          <label for="exampleInputEmail1" class="form-label">Drop Off Time</label>
+          <input type="time" formControlName="drop_off_time" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+      </form>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="addCarDetails()">Add</button>
+        <button type="button" class="btn btn-warning" (click)="updateCarDetails">Update</button>
+      </div>
+    </ion-content>
+  </ng-template>
+  </ion-modal>
+
+  <!-- table -->
+
+<table class="table">
+  <thead class="bg-white">
+    <tr class='text-dark'>
+      <th>ID</th>
+      <th>Name</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Model</th>
+        <th>Image</th>
+        <th><a id="trigger-button"></a>Pick Up</th>
+        <th><a>Drop Off</a></th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let row of carData">
+    <tr style="color: yellow; font-weight: bold;">
+      <td>{{row.car_id}}</td>
+      <td>{{row.vechile_name}}</td>
+      <td>{{row.vechile_brand}}</td>
+      <td>{{row.rent_price}}</td>
+      <td>{{row.year_model}}</td>
+      <td>
+        <button type="button" class="btn btn-info mx-3">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteCar(row)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>

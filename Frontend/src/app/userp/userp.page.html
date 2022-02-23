@@ -1,0 +1,48 @@
+
+  <ion-card-content>
+   
+    <div class="container">
+      <form [formGroup]="updateForm" (ngSubmit)="update">
+        <h3>UPDATE DETAILS</h3>
+        <input
+          type="text"
+          formControlName="first_name"
+          placeholder="first name" required ng-Model = "first_name" pattern="[a-zA-Z{1,}]"
+        />
+        <span
+        class="text-danger"
+        *ngIf="updateForm.controls['password'].dirty && password.hasError('required', 'first_name')"
+        >name required</span>
+        <input
+          type="text"
+          formControlName="last_name"
+          placeholder="last name"
+        />
+        <input type="text" formControlName="email" placeholder="Email" required/>
+
+        <div class="btn-box">
+          <button
+            type="submit"
+            [disabled]="!updateForm.invalid"
+            (click)="update"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+
+      
+    
+    </div>
+    <!-- <script>
+  var form = document.getElementById("form");
+  var btn = document.getElementById("btn");
+  btn.onclick=function(){
+    form.style.left = "-450px"
+  }
+  
+  </script>
+   -->
+ 
+  </ion-card-content>
+

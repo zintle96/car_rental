@@ -1,0 +1,35 @@
+body {
+  background-image: url("/assets/aaron-huber-8qYE6LGHW-c-unsplash.jpg");
+  filter: brightness(60%);
+  background-size:cover ;
+  background-position:center;
+  height: 100%;
+}
+
+// .navbar {
+//   cursor: pointer;
+//   position: absolute;
+//   width: 100%;
+//   top:0;
+//   z-index: 9999;
+// }
+.navbar-toggler {
+  background-color: yellow;
+}
+.right-inner-addon {
+  position: relative;
+  
+  width: 200px;
+}
+.right-inner-addon input {
+  padding-right: 30px;
+  width: 170px; /* 200px - 30px */
+}
+.right-inner-addon img {
+  position: absolute;
+  right: -10px;
+  padding: 10px 12px;
+  pointer-events: none;
+  
+  top: -8px;
+}

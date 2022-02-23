@@ -1,0 +1,128 @@
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 150px; height: 150px;"></a>
+          <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/models">Fleet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/dash">Dashboard</a>
+              </li>
+            </ul>
+            <div class="buttons">
+              <ion-button color="warning" routerLink="/booking">Bookings</ion-button>
+              <ion-button color="warning" routerLink="/login">Login</ion-button>
+              <ion-button color="warning" routerLink="/registration">Sign Up</ion-button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+  <div class="carousel-inner" style="widows: unset;">
+    <div class="carousel-item active">
+      <img
+        src="https://www.topgear.com/sites/default/files/cars-car/image/2021/05/kia_picanto_hatch_dynamic_front34.jpg"
+        class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block  ">
+        <h1 style="align-content:flex-start; color: aliceblue; font-size:x-large;">Get in style with the stylish kia
+          <p>explore the design features of this beauty</p> <button type="button"
+            class="btn btn-success font-size-base" routerLink="/booking">Book Now</button>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-9" style="font-size: medium;color: yellow;">variability</div>
+      <br>
+      <br>
+      <h1>Feel-good ambience for up to five people.</h1>
+      <h1 style="font-size: medium;">
+        4 seat – countless possibilities.</h1>
+      <br>
+      <hr>
+      <div><img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVFRUYGBgYGBgYGBgaHBgaGBgYGBgaGRgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHBISHjQkJSs0NDQxNDQ0NDU0MTQ1ND82NDQ0NDg0NDQ0ND80MTYxNDQ0MTYxNDQ0NDQ0MTQ0NDQxNP/AABEIAIQBfAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EAEsQAAIBAgEGDAMFBAcGBwAAAAECAAMRBAUSITFxkQYTIjJBUVJhgaGxwVOS0RQVQnLwgrLC0gcjM4Oi4fFDRFRik6QWJGNzw9Pi/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAIBAwQF/8QAIBEBAQEAAgICAwEAAAAAAAAAAAECAxETIRIxIkFhBP/aAAwDAQACEQMRAD8A7gCaoEzE1jaJqQCCxYiwCUMZz/AS86XBFyL6LjXM/EpYgXJso0nX0wIWmpT1DYPSZhmnT1DYPSBi4lLOw7/XTIgJPjTy22+wkMAEuZOpgtfqGjaf0ZSMv5KbSw2Hdce83oad5j8KcSUwldxoPFsq9YZ+QvmwmwZg8NaZbBV7fhVX8EdXPkpmDL4JUguHW3T/AKe03Ji8FHvh1HVo8gfebUC7g15O0yzIMHzPEyxASEIsCvjOYdolCXMTSADML3bNv4GU4FvAjneEiyquhT3kfrdJcD+LwjMqHkrt9v8AOBmXhAxBAWELRIDhNfAJZB36T4/5WmPNvCNdFPcPLR7QJSZw/Dhy2JwtO/JGe7DvLKqnwAedwTOC4bjNxeGfoKOPFGv/ABiB0yCwGyPEamoRy6xA1AIsIsBBCAiOgIIOoi0CjjOd4D3kEmxKBSANQUe8hgadLmjYPSY2MWzsO++/T7zZpc0bB6THxxu7bfQCBBFhCATQyWnOOwep+kzxL2S3sxHWNG0f6mBpmNzY4xt4GWTNNHuAesd85nBI9NmvUquDZlJZRYNfkWVQNBB8CJdbFXHNa/e1/aBt5/cdx+kA3cdzfSYaYjtKfBvqI/7QvZb5v/zA2c49R3N9JTxVNi181ujoP0lA1x2D87ewlhMYo1Id8BHpsBzW3GaYIVbnQANMzWyi34VUeZletiWfnNcdWobhAa73JPWb75GYt40zZGWgyShWKMGHiO6RxpM6SItdIjhgCDe8ixeGDo6MOS6sjbGBB9Zh0cQ6c0+HRul1csMPwjwJHlJ8ev035z9uS4KVmou+Frcl0IAvoDhUUZ69Ya2dsM6vOHWJFXyjn6TTQkai3KI6rdUzMSmewfOqArYZi1HVGUmxJUG1xoPgY8ejyZdJgmIBFjbWDY23yxxmyc8mKt+C+13J9Y4Ygk81bdV3vvzvaLx6z9wnJm3qVv8AGbIufs/XjMX7QOx/jf6wNcdCDxZz7yFtXEgstgL6R1fWVOIfs+a/WV0xA6aaX6wLfWTHKLdCqPOBZwCHlXBFzov02Eq5TqhmABvm+vT6SJ8W7a2NuoaBuEggEIQgEIRDAJfydic05rajq7jKBgYHR2nLcPMmPUoB0Us9ElwoGlkZCrgDpIuGt05lpeoYx16bjv07pOcpt1De0DLyJlBKtJWBF7AMDoINtRE0Rp1admn0kNXFMdSoL9IBB3gzPw2FWmzFc5g1m5buxBN85dLatAI/NA6hKmgX0G2m8OOHWN6/WY3Hm2hV23b6xErMNaqfFh6NA2hU7xvX+aLxmzev80xvtH/Iu9/rE489hPEE+pgaGIRma4AOr8S/WQtQe3NvsKn3kaY0jUiiI2UHOohdg+sDVuES7aAAN/UO+YTvcknpJO+FR2bnMTtMbAWEIkBYBiDca4kIGzhsargA6G6uuWs0foGc7F4xu028wJeKT4n+EyNwAdBuOvVIqjhRnMbAdO02kf2xO15N9JUzbO5E3Unq1PEYiMdwBM+vi5KmqmZa5cA9ViY0snxBuMwHxvfG/ayQW6AQCegE6htgbxKfEG4wzk7Y3Gc59uHXEOOHXA6MunbG4wDJ2xuM5z7cOuKuN75cTXSjNtzxuMZeYlPG980KGIvOmXPS0REMa7gC51SFsWna8m+k7Zzb9Rx1qT7q0iAjS1u60DTXtjcZHeNvLkRqphTXtjcY8IvaG4yBZIJtc6mCDtDcZItNe2NxlcRwnHXHmqzz6z/U/FL2xuMhAjrRCDPPrFy9WOfOvX1REhCQ7paSKRpfN7rXjuJTtj5TIIkCyKKfEG4xDQTtjcZBCBOaCdsbjE4lO2NxkObKFbLGGQ5rV6YI0WLrfdeBrcSnbG4xrogBIe56rEXmQuXMMdWIpfOo9ZVyjl9FCilVpEswBcsCqC412Ovb1GBtkwlH74w3xk+YRy5UoHVVTp/EOiBckyU1IuXAPVYmZRyzh/ipviHLmG+OnzCBr8UnbG4wFJO2NxmSuWcN/wARS1E89Rq16zIxwgwn/E0vnEDb4lPiD5TDiE+IPlMzqWUKL8yqjbHU+hlkQJ+JT4g+UxHpoBoe56rEXkNoQFhCF4CSanTUi5cA9VjIoQJ+KTtjcYnFJ2xuMhhArY9SUIAN7p++plhjFlrAUQzXOpbbzqlfL8ZlPx/K02lkrP0uT+UaN5k/3NQ+Gnjc+ZM0picLcaaWErODZszMUjWGcimCNmdfwkqYtJ8HXd0pUM8ISpqAlUuOzyuVp9Nl3NkQ3zVzBRvnZhRyc+2bnF8+50aAO8x/BTCLTw6ZotcX/XlNqBQpZBoEf2SG2vQ4/igODtEG/FJsOdbzabuETk7T+vST5sDnvuGj8Glub+eJ9xUfg097D+KdFb9aYZu3eYGGuSqK66NIDrJv6x5ybh+gBfyvbyvaaGOHJG32lOb3WdQwZNBF0e47/S4mXjkOY62N81hbpvYzo8DzT+b2Ez8s07OD1jzH6E78O78vbjzYnxZic0bB6RYpiT0vKcJIBIxJFippwjhGiOEioqQRwjBHCY50FYhQx4jxOWsSumOfWP7FeITLDIDImpkapx1ix7uP/Tnfr6pl4ytVCKWY2VRcnujpRyvYoFJABYFidQVeUSdw8bSXoYvCHHO2aOM4mna/TxjnTeyrpzRq1gXvpMrZKcNyEwzuG0NUP9Xo688AkD9qWq3CiinMQ1CABntZRo1W0FiN0o1uGtU6gir0gLe46izXO6aOYy5VU4h0oKqIjlQQAxYjnMzNe4vnaurvkmHSobXPko9BI+D1NHzndgCC2knWSQTo6eiatfKVFOaGc/Ku86fKbE1PhcGzmzu9rXOa7jV3K0unI1DoxGJ31v8A7Zy2Jy9Va2YeLBNiEJBI0aGbp8pzz4+r8Wp87/WGvRWyFS6MTiB/1v5zGfcidGNr/wDcexM86+8a3xqnzv8AWTvlOtmpatV1G/LfTy216dOi26GdvQUyYB/vtX/uh55slTJSD/eqhPe9f0amZ5uuVcR8er87/WSLljEfHq/O/wBY6O3o1bgq9VR/WsynSLsNPiaYlfC8GMTRcmi7qVNgC3JNtwKnZvmNgeF2JREUVn0KBzjLD8MMS2jjnHeCL77SVSvRMDXLorkWJHKHUw0MPAgyec/wNxhqUGziWZajhidZLHPv/jM6CCi0IkUQCEIQCFoXhAJp5L5p2+2j3mXLmArhWsdTW39EDWtOV/pFP/kz/wC5T/e0edp1ZExuFWBNbC1kUXbMzkHW6EOo8SoHjApZEI4lLdRG4ke0vzB4I4tXo8k3szW2Ekg7jN6Bo4fmL+uuS2lfBtddh9ZYvt3GAQiZ23cYud+rQKeJDWOda2dybdVjrlWXMc3JG32MpXgXsFzTt9hKeWvwfte0uYDmn8x9BM7LL3cL2R5nT6WnTineo58t/FmmEUxJ7XipyyRZEJIIqKeI4RojhIqakEcIwR4mOdKI9YwR4kppYhiM4Eiepec9akd+Hh3q99eivac9wuuKBI2ea/SbszsvYfPouoFza4H06z027pxt7fTzn4zp5PUcyHOMsY7DsjFWFj5EHSCD0giVV1zFLeSWupOrQNA1C3J0eCiGJiZC/wBovZI9WkuKSVE1nv0bfpMqpNZ19ZQbCv2G3GGqhEedS7D+8ZYGAqdFN/lMm+7KxAtSfV2T1mBQEeJdXI+I+C/ymSDIuI+C+60B2CqhdJQPybaejviqZYp5Ir2A4s+JUepkD0mRirDlKbEaDpHeNBktek8AqIXDuw/HUa/VyQBonUTD4IUczC07/izm+ZjbytNuG2920QhCGFhCLAbC0WECrj3OYbaNKavzrLVpA2awzWAIPQY0YKn2FnSXNzJUWamrY18PlEiwYXHX0y59up9fk0xAIs5rMTJuGp1Hq0i6FyWZFvmMx1nNI0adOi2uMrYiqHFuL4s6ATn5+eAWsQpAtYHT3SaBEC3TxQA5yjYjH1jPtum17d+YtvI38pWgRNgvfah21+Q/SIcWO2PBPrKNo0iVMxN1WmmLXWX8MxQP3b+ce+OpjrbYoEybRrS5iIu60XypYWRAvn5DRMfGsSjm5vmsb9N7GFVlIsdI6pWehT7Cz0cWc5vbhya1qdLSc0bB6RZBxojeOnTty66WhJFlMVpIlaZU2LYjhIUcSVTIqKkWPEjBgWnLW8xeODWv5EmdaNaoYyE463a9eP8APjPu+6DAQhIegRDFiGBi5dyGuIswIVgLG4urDouOg985CtkAjOVsLWv+F6boV8Uz7/rVPRzGOIHk2GyLikfPXDvbSDpQBh3gkd0nx2HrKUVqDKXNlBZNLdQ0z00pKeOyclVQrg6GDAjQQw0ggze2dOA+5K2giiQe8Em+1XEsPhMZrOeb91dv/knfGnE4uZ21582BxnU3y1Pd4w5OxnZf5D7vPReLiinA87GTMT003JP/AKSH1qaJJTybidX2e/8AcYa+9nnoQSPAgefPwfxrDkIEb/nTCqP8AJlvBcDsUxvXxChTzlp3vbqFgq+U7bjBENYQ2J6VMIqoosqgKB1ACwEeJV48ROPhi2IsqivHLXgWBEMYrx8A0wuYtokDJTHp2D8xlqnigTo0DqveWKfB+iNdNz+39CJaXIlIag67GJ9bwIUa8W8sLk63Ne/cRp8pC6FTYwJKbpazKSesGOz6fYb5pXhAsZ9PsNvgXp9ht8r2gIExdOw2+NLp2TvkZjTLlTYdUqIBzTvmTXxXfNqlkwuLsSAega951Sb7godKX7y7+xlfKRPx7cm+L75EcUTc6bDWegXNhfxmm+HwD1WoolR3QlXKM+YpGsFi1iQdGi+kHqjamRCDmIqcSSGYM1XPLDQvKW/JFybdc3yM8bNXGr06fGJ9tXqO+b1Pg1hyNNMH+8qD1MQcGcODzCR1cYbb9fnN80T4qwxjU6jvkiY1Oo75uf8AhvDfBH/UqfzRf/DtDopAf3j+5m+aM8NZlHGr1HfNXD4pD+E75JTyHRGuj455t+8PSTjI9Ec3OXY1/W85a3qrzw5z7IHTstvkQEsjAaOS2dK5FtB1yHURIRYElJkA5SknosbR3GU+w3zSCFoFjPp9ht8M+n2G3ytC0CyXp9g74wsnYO+QgwvAlJp9g75E7JY2Qg9BvfyiGBECEpDi5KFhAh4uTpmW5SknrB0RpECIA70x+A/NKVXGIPwnfNajkfO0uT+UaN51ywciULaaa+JY+ZMDmGx6dk/NGHGpbOzDa4F842uQSBt0HdLGHTA4hmWjSZwpILhnVDbs3blA9fVHNkQkhCE4lSWVDxmeHYWZmYOc7QAAOjTApfeKdk/NGtlBLaFt4zcTg9hyP7JT+1UHq0ReDlAf7NT3F2/mgYAxo649cYOub/3BQ+Cnzv8Azw+4KPwU+d/5jAx6WNmxhcUhGlST1gyZMkUBrpIO/Pv73kv3bRGrk7Hv5EmAgdOwfmi56dg/NH/YdF0bOH66RKsDcq0xmtsPV1TNzR1CaVYtewHJzTc+EzoEuDFn1fhPqslylTul+o+R0fSR4TneB9RLGM5jbPeBjQhEMBYXhEIgLJ8Fh89tOoadp6BK5E0slDQ20eh/zgXwJm8IMcaOGq1AdKI2b+c8lP8AERNIic1/SEbYF/z0b7OOpwM7gbg1SgGGttJPSTq0np1ToZmcHv7BNltxM04F3Bpyb9Z9P0ZYzdu8yPC8wePqZNAbm7d5iZv6uY6ECrjUGaNvsZStLmJLWOda2cM23jrlSBbwGpvzfwrK2VEswPWPT/WWsDqO32EiyrqXafSBmwvCEAiRYQCBhCAkLRbxICiLEBgYAREIheBgIJdyfRDEsdS6tspWmtkscjxPoIF2c/w1xhp4OoV5z2pi2vlsFa37JadBach/SOT9np21cet/kqW87QJODeFWnQQKNYB36Zqypksg0kt2R6S3Av4ZOQO/TJs39XMbQ5q7I+0BoG3eYtv1cxQIQKuOXQvjKcs4nOtyrc42t1WlaBdwXM8W9ZTx9Pl36wD7e0uYPm+JhibX8IFirzTsPpMqEIE2D5/7J9Vk+UOYfD1hCBjiBhCAQhCAS9ko6Ts94QgaZmHwyQHBYi/RTJG1SGHmBCEDL4LH+oG0zahCBfwfM8TLEIQE6YsIQK2O5viPQyjCEC5gNTfm/hWQZV1r4+0IQM6LCEBBAQhABFhCAkIQgKIQhAWNhCATTyWedtHvCEC+ZzP9ICD7E56Q9IjbxqD0JhCAmQj/AFCbPczRhCBo4bmL4+pk0IQEhCECrjtS7TKcIQLuB5vifWVMpNZh+UephCB//9k="
+          class="d-block w-100" alt="..."></div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-9" style="font-size: larger; color: yellow;">The Design
+      </div>
+      <br>
+      <div class="col-9">
+        <h1>Progressive luxury in sporty form.</h1>
+      </div>
+    </div>
+  </div>
+  <br>
+      <hr>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12">
+            <h1 style="font-size: x-large;">Expressive design.</h1>
+
+            <p style="font-size: x-large;">
+              The 2020 Kia Sorento may be the perfect fit for you and your family with room for up to seven passengers and an IIHS Top Safety Pick award on its resumé. Families interested in the Kia Sorento may want to know – what are the 2020 Kia Sorento safety features and technology? Find out at Concord Kia! 
+            </p>
+          </div>
+          <div class="col-9"><img
+              src="https://cars.usnews.com/static/images/Auto/custom/14277/2020_Kia_Sorento_21.jpg"
+              class="d-block w-100" alt="..."></div>
+        </div>
+        <br>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-9" style="font-size: medium;color: yellow;">A CLOSER LOOK</div>
+            <br>
+            <br>
+            <h1>Explore some of the styling details that make the kia serento so striking.</h1>
+            <br>
+            <br>
+            <div class="container">
+              <div class="row">
+                <div class="col order-last">
+                  <img src="https://media.ed.edmunds-media.com/kia/sorento/2019/oem/2019_kia_sorento_4dr-suv_sx-limited_ri_oem_1_815.jpg" alt="">
+                </div>
+                <div class="col">
+                  <img src="https://t1-cms-1.images.toyota-europe.com/toyotaone/euen/toyota-corolla-hatchback-2021-gallery-26-prev-168_tcm-11-2406909.jpg" alt="">
+                  <button type="button"
+                  class="btn btn-success font-size-base" routerLink="/booking">Book Now</button>
+                </div>
+                <div class="col order-first">
+                 <img src="https://i.ytimg.com/vi/LkWSl-Jfc-w/maxresdefault.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 20%; height: 20%;"></a>
+        <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/registration">Fleet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/dash">Dashboard</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <ion-button color="warning" routerLink="/login">Login</ion-button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="row">
+  <div class="col-lg-10 col-xl-7 mx-auto">
+  <form [formGroup]="formValue" class="admin">
+    <div class=" m-3">
+      <label for="exampleInputEmail1" class="form-label">First Name</label>
+      <input type="text" formControlName="first_name" class="form-control rounded-pill" placeholder="Name" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="m-3">
+      <label for="exampleInputPassword1" class="form-label">Last Name</label>
+      <input type="text" formControlName="last_name" class="form-control rounded-pill" placeholder="Last Name" id="exampleInputPassword1">
+    </div>
+
+    <div class="m-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control rounded-pill" placeholder="Email" id="exampleInputEmail1">
+    </div>
+    <div class="m-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="pwd" formControlName="password" class="form-control rounded-pill" placeholder="Password" id="exampleInputPassword1">
+    </div>
+
+  </form>
+</div>
+</div>
+</div>
+</ion-content>

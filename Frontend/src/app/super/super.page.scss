@@ -1,0 +1,24 @@
+.img2 {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 7px solid #fff;
+}
+ion-card{
+  background-size: cover;
+  height: 100%;
+  border-radius: 10%;
+  align-items: center;
+}
+.navbar-toggler {
+  background-color: yellow;
+}
+ion-card .title {
+  text-transform: uppercase;
+  font-size: large;
+  text-align: center;
+}
+
+ion-grid {
+  align-items: center;
+}

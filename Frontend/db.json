@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "brand": "Toyota",
+      "colour": "Black",
+      "price": "R1000",
+      "model": "2012",
+      "description": "Corolla",
+      "id": 2
+    },
+    {
+      "brand": "BWM",
+      "colour": "Red",
+      "price": "2000",
+      "model": "2020",
+      "description": "1 series",
+      "id": 3
+    },
+    {
+      "brand": "Mazda",
+      "colour": "yellow",
+      "price": "1000",
+      "model": "2021",
+      "description": "version 3",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

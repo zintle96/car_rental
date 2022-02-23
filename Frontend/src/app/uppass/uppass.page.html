@@ -1,0 +1,35 @@
+
+
+  <ion-card-content>
+    <div class="container">
+    
+        <form id="form1" [formGroup]="password" (ngSubmit)="update">
+      <h3>UPDATE PASSWORD</h3>
+      <input
+        type="text"
+        formControlName="password"
+        placeholder="Current Password"
+        required
+      />
+      <input type="text" placeholder="new password" required />
+      <span
+        class="text-danger"
+        *ngIf="password.controls['password'].dirty && password.hasError('required', 'password')"
+        >Password required</span
+      >
+
+      <div class="btn-box">
+        <button type="button" id="btn" onClick="alert('Updated succesfully')">Update</button>
+      <!-- <input type="button" id="btn" value="Update" onClick="showMessage()" /> -->
+         <!-- <script type="text/javascript">
+          functio showMessage(){
+              alert("Successfully Update");
+          }
+      </script>  -->
+
+      </div>
+    
+    </form>
+    </div>
+</ion-card-content>
+

@@ -1,0 +1,78 @@
+
+<ion-header>
+  <ion-toolbar color="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 150px; height: 150px;"></a>
+        <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/models">Fleet</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="bg-img">
+    <div class="row no-gutter">
+
+      <div class="login d-flex align-items-center py-5">
+
+        <div></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-xl-7 mx-auto">
+              <h4 style="color: rgb(248, 248, 76); font-size: xxx-large;">Please Login for booking</h4>
+              <br>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mb-3">
+                  <input id="inputEmail" type="email" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email address" required=""
+                    autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                  <br>
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <input id="inputPassword" type="password" formControlName="password"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" required=""
+                    class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                </div>
+                <br>
+                <ion-button type="submit" class="btn btn-warning btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                  routerLink="/wish">Login</ion-button>
+                <br>
+                <br>
+                <a routerLink=""></a>
+                <h1 style="color: aliceblue; font-size: medium;">dont have a account yet? </h1>
+
+              </form>
+              <ion-button class="btn btn-warning " routerLink="/registration"> create account </ion-button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-toolbar>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 100px; height: 100px;"></a>
+      <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/registration">Fleet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/dash">Dashboard</a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <ion-button color="warning" routerLink="/login">Login</ion-button>
+          <ion-button color="warning" routerLink="/registation">Sign Up</ion-button>
+        </div>
+      </div>
+    </div>
+    </nav>
+</ion-toolbar>
+
+<ion-content bg>
+  <!-- <ion-item id="card">
+    <ion-input placeholder="Name"></ion-input>
+    <ion-input placeholder="Email"></ion-input>
+  </ion-item> -->
+  <ion-label>Select picking Location</ion-label>
+  <ion-item id="card">
+    <ion-col size-md-4 id="card">
+      <ion-label>Pickup Location</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="L">Pretoria</ion-select-option>
+        <ion-select-option value="MP">Midrand</ion-select-option>
+        <ion-select-option value="GP">Centurion</ion-select-option>
+        <ion-select-option value="KZN">Sandton</ion-select-option>
+        <ion-select-option value="FS">Randburg-Jhb</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-col size-md-4>
+      <form action="/action_page.php ">
+        <label for="birthday">Date:</label>
+        <input type="date" id="Car" name="Location">
+      </form>
+    </ion-col>
+
+    <ion-col size-md-4>
+      <form action="/action_page.php">
+        <label for="appt">Select Time:</label>
+        <input type="time" id="appt" name="appt">
+      </form>
+    </ion-col>
+  </ion-item>
+
+  <ion-label>Select drop off Location</ion-label>
+  <ion-item id="card">
+    <ion-col size-md-4 id="card">
+      <ion-label>Destination</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="L">Pretoria</ion-select-option>
+        <ion-select-option value="MP">Midrand</ion-select-option>
+        <ion-select-option value="GP">Centurion</ion-select-option>
+        <ion-select-option value="KZN">Sandton</ion-select-option>
+        <ion-select-option value="FS">Randburg-Jhb</ion-select-option>
+      </ion-select>
+    </ion-col>
+
+    <ion-col size-md-4>
+      <form action="/action_page.php ">
+        <label for="birthday">Date:</label>
+        <input type="date" id="Car" name="Location">
+      </form>
+    </ion-col>
+
+    <ion-col size-md-4>
+      <form action="/action_page.php">
+        <label for="appt">Select Time:</label>
+        <input type="time" id="car" name="location">
+      </form>
+    </ion-col>
+  </ion-item>
+
+  <ion-button (click)="confirm()" (click)="dismiss()">Confirm</ion-button>
+
+
+</ion-content>

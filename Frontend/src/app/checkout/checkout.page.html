@@ -1,0 +1,86 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home"><h1>we rent cars</h1></a>
+        <br>
+        <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/models">Fleet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/dash">Dashboard</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <ion-button color="warning" routerLink="/booking">Bookings</ion-button>
+            <ion-button color="warning" routerLink="/login">Login</ion-button>
+            <ion-button color="warning" routerLink="/registration">Sign Up</ion-button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="cars.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Car Name</th>
+                            <th>Car Image</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of cars; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.vechile_name}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.total}}</td>
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="cars.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title" style="color: black;">CART</h5>
+        </div>
+        <div class="center">
+            <img src="assets/car-logo.png" alt="">
+            <h4 style="color: rgb(0, 0, 0);">Your cart is empty!</h4>
+            <h6 style="color:black">Add item to it now</h6>
+            <button routerLink="/products" class="btn btn-primary">Rent Now</button>
+        </div>
+    </div>
+</ng-container>
+</ion-content>

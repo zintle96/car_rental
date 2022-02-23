@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 100px; height: 100px;"></a>
+        <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/models">Fleet</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </ion-toolbar>
+</ion-header>
+<br>
+
+<ion-content >
+  
+  <ion-card class="card" [formGroup]="formValue">
+  <ion-item color="">
+    <ion-label position="floating">Name</ion-label>
+    <ion-input  formControlName="name" type="text" required></ion-input>
+    
+  </ion-item>
+
+
+    <ion-item color="">
+      <ion-label position="floating">LastName</ion-label>
+      <ion-input  formControlName="last_name" type="text" required></ion-input>
+    </ion-item>
+
+
+  <ion-item color="">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input formControlName="email" type="text" required></ion-input>
+  </ion-item>
+
+
+  <ion-item color="">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input formControlName="password" type="password" required></ion-input>
+  </ion-item>
+
+
+  <ion-item color="">
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input formControlName="confirm_password" type="password" required></ion-input>
+  </ion-item>
+
+
+  <ion-button class="ion-margin-top" type="submit" expand="block" color="light" (click)="onSubmit()">
+    Create Account
+  </ion-button>
+
+  <ion-item color="" class="ion-text-center">
+    <ion-label>Or</ion-label>
+  </ion-item>
+
+  <ion-button color="warning"  [routerLink]="['/login']">Login</ion-button>
+</ion-card>
+</ion-content>
