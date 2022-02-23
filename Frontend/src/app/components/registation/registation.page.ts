@@ -14,7 +14,7 @@ export class RegistationPage implements OnInit {
   LastName: any;
   email: any;
   password: any;
-  
+
 
   constructor(private carservice: CarService, private formBuilder:FormBuilder) { }
 
@@ -35,13 +35,13 @@ export class RegistationPage implements OnInit {
       email: this.formValue.value.email,
       pwd: this.formValue.value.password
     }
-    
+
     this.carservice.register(data).subscribe(res =>{
       console.log(res)
     });
 
-     
+
   }
-  
+
 
 }

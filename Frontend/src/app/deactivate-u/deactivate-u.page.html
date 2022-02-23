@@ -1,4 +1,4 @@
-<nav class="d-flex align-items-center navbar navbar-expand-lg bg-dark">
+<nav class="align-items-center navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 100px; height: 100px;"></a>
     <a role="button" onclick="history.back()" ><img src="assets/back-b.png" alt="" style="width: 10%;"></a>
@@ -24,7 +24,7 @@
   <ion-content>
       <!-- table -->
 
-<table class="table">
+<!-- <table class="table">
   <thead class="bg-white">
     <tr class='text-dark'>
       <th>ID</th>
@@ -33,17 +33,43 @@
         <th>Email</th>
         <th>Password</th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+  <!-- <tbody *ngFor="let row of userData">
     <tr>
-      <!-- <td>
-        <button class="btn btn-danger">Delete</button>
-      </td> -->
+      <td>{{row.user_id}}</td>
+      <td>{{row.first_name}}</td>
+      <td>{{row.last_name}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.pwd}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteUser(row.user_id)">Delete</button>
+      </td>
     </tr>
-  </tbody>
+  </tbody> -->
 
-</table>
+<div class="users">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 p3" *ngFor="let row of userData">
+        <div class="card text-center" >
+          <div class="header">
+
+            <div class="img"><img src="assets/icon/user-icon.svg" alt=""></div>
+            <div class="main-text">
+              <h3><span>Full Names:</span> {{row.first_name}} {{row.last_name}}</h3>
+              <h4><span>Email:</span> {{row.email}}</h4>
+
+            </div>
+            <div class="btn">
+              <div type="button" class="btn btn-danger" (click)="deleteUser(row.user_id)">Delete</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   </ion-content>
 

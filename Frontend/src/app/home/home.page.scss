@@ -26,7 +26,9 @@
 #container a {
   text-decoration: none;
 }
-
+.carousel-item > img {
+  height: 50%;
+}
 .nav-item a {
   text-transform: uppercase;
 }
@@ -35,4 +37,7 @@
 }
 .book {
   align-items: center;
+}
+ion-button {
+  margin: 1rem;
 }

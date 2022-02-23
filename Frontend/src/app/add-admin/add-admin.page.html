@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
       <div class="container-fluid">
         <a class="navbar-brand text-white" routerLink="/home"><img src="assets/car-logo.png" alt="" style="width: 20%; height: 20%;"></a>
@@ -30,13 +30,14 @@
   <div class="container">
     <div class="row">
   <div class="col-lg-10 col-xl-7 mx-auto">
+    <h2 class="text-center text-warning" style="font-weight: bold; text-transform: capitalize; font-size: 40px;">Add an admin</h2>
   <form [formGroup]="formValue" class="admin">
     <div class=" m-3">
-      <label for="exampleInputEmail1" class="form-label">First Name</label>
+      <label for="Name" class="form-label">First Name</label>
       <input type="text" formControlName="first_name" class="form-control rounded-pill" placeholder="Name" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
     <div class="m-3">
-      <label for="exampleInputPassword1" class="form-label">Last Name</label>
+      <label for="lastName" class="form-label">Last Name</label>
       <input type="text" formControlName="last_name" class="form-control rounded-pill" placeholder="Last Name" id="exampleInputPassword1">
     </div>
 
@@ -46,11 +47,12 @@
     </div>
     <div class="m-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="pwd" formControlName="password" class="form-control rounded-pill" placeholder="Password" id="exampleInputPassword1">
+      <input type="password" formControlName="pwd" class="form-control rounded-pill" placeholder="Password" id="exampleInputPassword1">
     </div>
-
+    <div class="btn"><button class="btn btn-success" (click)="onSubmit()">Add</button></div>
   </form>
 </div>
 </div>
 </div>
+
 </ion-content>

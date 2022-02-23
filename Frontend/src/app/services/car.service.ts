@@ -39,7 +39,7 @@ export class CarService {
   login(data: any){
     return this.http.post<any>("https://backend-car-rentals.herokuapp.com/api/car-rentals/login", data, {withCredentials: true}).pipe(map((res => {
       return res;
-      
+
     })))
   }
   updateCar(data: any, id: any){
@@ -57,6 +57,16 @@ deleteCar(id: any) {
 addtoCart(string: any) {
   this.checkItems.push(string)
   return this.checkItems;
+}
+getUser(){
+  return this.http.get<any>("https://backend-car-rentals.herokuapp.com/api/car-rentals/users").pipe(map((res: any) =>{
+    return res;
+  }))
+}
+deleteUser(id: any) {
+  return this.http.delete<any>("https://backend-car-rentals.herokuapp.com/api/car-rentals/deactivate-user/" + id).pipe(map((res: any) =>{
+    return res;
+  }))
 }
 
 // getUser(): Promise<string> {

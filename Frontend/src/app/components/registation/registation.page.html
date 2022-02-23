@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-white" aria-current="page" routerLink="/home">Home</a>
             </li>
 
             <li class="nav-item">
@@ -25,12 +25,15 @@
 <br>
 
 <ion-content >
-  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-7 mx-auto">
+
   <ion-card class="card" [formGroup]="formValue">
   <ion-item color="">
     <ion-label position="floating">Name</ion-label>
     <ion-input  formControlName="name" type="text" required></ion-input>
-    
+
   </ion-item>
 
 
@@ -68,4 +71,8 @@
 
   <ion-button color="warning"  [routerLink]="['/login']">Login</ion-button>
 </ion-card>
+
+</div>
+</div>
+</div>
 </ion-content>
